@@ -42,17 +42,7 @@ def process_inside_room(room_number):
 
 
 def main(room_number):
-    if room_number == 1:
-        process_inside_room(room_number)
-    elif room_number == 2:
-        process_inside_room(room_number)
-    elif room_number == 3:
-        process_inside_room(room_number)
-    elif room_number == 4:
-        process_inside_room(room_number)
-    elif room_number == 5:
-        process_inside_room(room_number)
-    elif room_number == 6:
+    if room_number == 1 or room_number == 2 or room_number == 3 or room_number == 4 or room_number == 5 or room_number == 6:
         process_inside_room(room_number)
     else:
         print('Room doesn\'t exists!!!Please choose between 1-6')
