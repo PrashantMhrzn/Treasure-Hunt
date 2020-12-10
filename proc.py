@@ -1,11 +1,8 @@
 import random
 from time import sleep
 from treasure import TREASURE
+from constants import PERSON, RIDDLE, ANSWER
 
-person = ['Jeff', 'Athena', 'Aries', 'Hermies', 'Aphrodieti', 'Cerberus']
-riddle = ['The more of this there is, the less you see. What is it?',
-          ' I follow you all the time and copy your every move, but you can’t touch me or catch me. What am I?', 'What month of the year has 28 days?', 'What can’t talk but will reply when spoken to?', 'What is black when it’s clean and white when it’s dirty?', 'Where does today come before yesterday?']
-answer = ['darkness', 'shadow', 'all', 'echo', 'blackboard', 'dictonary']
 treasure_room = random.randint(1, 6)
 
 
@@ -17,9 +14,9 @@ def random_person(person):
 def process_inside_room(room_number):
     print(f'You are in Room:{room_number}')
     print(
-        f'I am {random_person(person)}, riddle me this "{riddle[room_number-1]}"')
+        f'I am {random_person(PERSON)}, riddle me this "{RIDDLE[room_number-1]}"')
     usr_ans = input('> ').lower()
-    if usr_ans == answer[room_number-1]:
+    if usr_ans == ANSWER[room_number-1]:
         if room_number == treasure_room:
             sleep(1)
             print('.')
